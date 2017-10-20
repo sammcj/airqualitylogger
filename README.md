@@ -4,6 +4,9 @@ For use with the "HT2000" Air quality monitors commonly found on eBay.
 
 ## Usage
 
+1. Requires Java (**Disgusting, I know** - I was lazy as it had the quickest USB HID library for me to interface with).
+1. Download the [latest release](https://github.com/sammcj/airqualitylogger/releases/latest), unzip and run:
+
 ```shell
 java -jar ht2000.jar
 ```
