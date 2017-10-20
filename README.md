@@ -31,3 +31,8 @@ Timestamp: 2017-10-20 21:09:53 Temperature: 24.5 Humidity: 42.0 Co2 PPM: 671
 ## Contributions
 
 Thanks to @eschava for his 'HT2000-java' implementation, (his GUI to the HT2000 can be found under the `gui/` directory)
+
+## Example HT2000 Devices
+
+![](https://github.com/sammcj/airqualitylogger/blob/master/HT2000-1.jpg?raw=true)
+![](https://github.com/sammcj/airqualitylogger/blob/master/HT2000-2.jpg?raw=true)
