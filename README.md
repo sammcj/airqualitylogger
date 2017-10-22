@@ -28,6 +28,8 @@ Timestamp: 2017-10-20 21:08:53 Temperature: 24.5 Humidity: 41.9 Co2 PPM: 669
 Timestamp: 2017-10-20 21:09:53 Temperature: 24.5 Humidity: 42.0 Co2 PPM: 671
 ```
 
+![](https://github.com/sammcj/airqualitylogger/blob/master/Example%20CSV%20Output.jpg?raw=true)
+
 ## Contributions
 
 Thanks to @eschava for his 'HT2000-java' implementation, (his GUI to the HT2000 can be found under the `gui/` directory)
