@@ -33,13 +33,18 @@ public class PrintState {
 
                 HT2000State state = usbConnection.readState();
 
-                String readDate = DATE_TIME_FORMATTER.format(state.getTime());
+//                String readDate = DATE_TIME_FORMATTER.format(state.getTime());
+
+                Date dNow = new Date( );
+                SimpleDateFormat currentDate = new SimpleDateFormat ("yyyy.MM.dd");
+                SimpleDateFormat currentTime = new SimpleDateFormat ("hh:mm:ss");
+
                 Double readTemp = state.getTemperature();
                 Double readHumidity = state.getHumidity();
                 Integer readCo2 = state.getCo2();
 
-                System.out.println("Timestamp: " + readDate + " Temperature: " + readTemp + " Humidity: " + readHumidity + " Co2 PPM: " + readCo2);
-                CSVUtils.writeLine(writer, Arrays.asList(readDate.toString(), readTemp.toString(), readHumidity.toString(), readCo2.toString()));
+                System.out.println("Date: " + currentDate.format(dNow) + " Time: " + currentTime.format(dNow) + " Temperature: " + readTemp + " Humidity: " + readHumidity + " Co2 PPM: " + readCo2);
+                CSVUtils.writeLine(writer, Arrays.asList(currentDate.toString(), currentTime.toString(), readTemp.toString(), readHumidity.toString(), readCo2.toString()));
                 writer.flush();
                 TimeUnit.SECONDS.sleep(60);
             }

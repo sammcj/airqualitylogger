@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ht2000">
+    <output-path>$PROJECT_DIR$/classes/artifacts/ht2000</output-path>
+    <root id="archive" name="ht2000.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ht2000" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.2.1/commons-lang3-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/usb4java/libusb4java/1.2.0/libusb4java-1.2.0-linux-arm.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/usb4java/libusb4java/1.2.0/libusb4java-1.2.0-linux-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/usb4java/libusb4java/1.2.0/libusb4java-1.2.0-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/usb4java/libusb4java/1.2.0/libusb4java-1.2.0-windows-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/usb4java/usb4java/1.2.0/usb4java-1.2.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
