@@ -25,7 +25,7 @@ public class PrintState {
         HT2000UsbConnection usbConnection = new HT2000UsbConnection();
         try {
             System.out.println("Taking measurements every 1 minute and saving to" + csvFile + ", press enter to end");
-            CSVUtils.writeLine(writer, Arrays.asList("Timestamp", "Temperature", "Humidity", "Co2 PPM"));
+            CSVUtils.writeLine(writer, Arrays.asList("Date","Time", "Temperature", "Humidity", "Co2 PPM"));
 
             while (System.in.available() == 0) {
 
@@ -36,15 +36,18 @@ public class PrintState {
 //                String readDate = DATE_TIME_FORMATTER.format(state.getTime());
 
                 Date dNow = new Date( );
-                SimpleDateFormat currentDate = new SimpleDateFormat ("yyyy.MM.dd");
-                SimpleDateFormat currentTime = new SimpleDateFormat ("hh:mm:ss");
+                SimpleDateFormat formatDate = new SimpleDateFormat ("yyyy.MM.dd");
+                SimpleDateFormat formatTime = new SimpleDateFormat ("hh:mm:ss");
+                String currentDate = formatDate.format(dNow);
+                String currentTime = formatTime.format(dNow);
+
 
                 Double readTemp = state.getTemperature();
                 Double readHumidity = state.getHumidity();
                 Integer readCo2 = state.getCo2();
 
-                System.out.println("Date: " + currentDate.format(dNow) + " Time: " + currentTime.format(dNow) + " Temperature: " + readTemp + " Humidity: " + readHumidity + " Co2 PPM: " + readCo2);
-                CSVUtils.writeLine(writer, Arrays.asList(currentDate.toString(), currentTime.toString(), readTemp.toString(), readHumidity.toString(), readCo2.toString()));
+                System.out.println("Date: " + currentDate + " Time: " + currentTime + " Temperature: " + readTemp + " Humidity: " + readHumidity + " Co2 PPM: " + readCo2);
+                CSVUtils.writeLine(writer, Arrays.asList(currentDate, currentTime, readTemp.toString(), readHumidity.toString(), readCo2.toString()));
                 writer.flush();
                 TimeUnit.SECONDS.sleep(60);
             }
