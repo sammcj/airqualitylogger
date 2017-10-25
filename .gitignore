@@ -27,3 +27,4 @@ out/
 .DS_Store
 *.db
 *.csv
+*.DS_Store
