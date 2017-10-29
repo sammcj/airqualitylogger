@@ -28,3 +28,4 @@ out/
 *.db
 *.csv
 *.DS_Store
+.idea/
